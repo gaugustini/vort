@@ -13,7 +13,16 @@
         <action
             android:id="@+id/action_search_to_result"
             app:destination="@id/result" />
+        <action
+            android:id="@+id/action_search_to_dialog"
+            app:destination="@id/dialog_search" />
     </fragment>
+
+    <dialog
+        android:id="@+id/dialog_search"
+        android:name="com.gaugustini.vort.ui.search.SearchDialog"
+        android:label="Dialog Search"
+        tools:layout="@layout/dialog_search" />
 
     <fragment
         android:id="@+id/result"

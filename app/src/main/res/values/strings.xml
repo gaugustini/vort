@@ -1,6 +1,22 @@
 <resources>
     <string name="app_name">Vort</string>
+
+    <string name="search">Search</string>
+
+    <string name="guild_rank">Guild Rank</string>
+    <string name="village_rank">Village Rank</string>
+    <string name="weapon_slots">Weapon Slots</string>
+
+    <string name="gender">Gender:</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+
+    <string name="blademaster">Blademaster</string>
+    <string name="gunner">Gunner</string>
+
+    <string name="skills">Skills</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="search">Search</string>
+
 </resources>

@@ -7,6 +7,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.gaugustini.vort.databinding.ListItemResultBinding
 import com.gaugustini.vort.model.Result
 
+/**
+ * Adapter used in result list (RecycleView).
+ */
 class ResultAdapter() :
     ListAdapter<Result, ResultAdapter.ResultViewHolder>(DiffCallback<Result>()) {
 
