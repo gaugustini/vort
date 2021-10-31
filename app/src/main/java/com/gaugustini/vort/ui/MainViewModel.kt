@@ -2,6 +2,7 @@ package com.gaugustini.vort.ui
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.gaugustini.vort.model.Result
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
@@ -17,4 +18,48 @@ class MainViewModel @Inject constructor() : ViewModel() {
     var mySkillsBlade = listOf<String>()
     var mySkillsGunner = listOf<String>()
     val done = MutableLiveData(false)
+    val results: List<Result> = listOf(
+        Result(
+            head = "Head#0", body = "Body#0", arms = "Arms#0", waist = "Waist#0", legs = "Legs#0",
+            decorations = listOf(
+                Pair(1, "Decoration#0"), Pair(2, "Decoration#1"), Pair(3, "Decoration#2"),
+            )
+        ),
+        Result(
+            head = "Head#1", body = "Body#1", arms = "Arms#1", waist = "Waist#1", legs = "Legs#1",
+            decorations = listOf(
+                Pair(1, "Decoration#0"), Pair(2, "Decoration#1"), Pair(3, "Decoration#2"),
+            )
+        ),
+        Result(
+            head = "Head#2", body = "Body#2", arms = "Arms#2", waist = "Waist#2", legs = "Legs#2",
+            decorations = listOf(
+                Pair(1, "Decoration#0"), Pair(2, "Decoration#1"), Pair(3, "Decoration#2"),
+            )
+        ),
+        Result(
+            head = "Head#3", body = "Body#3", arms = "Arms#3", waist = "Waist#3", legs = "Legs#3",
+            decorations = listOf(
+                Pair(1, "Decoration#0"), Pair(2, "Decoration#1"), Pair(3, "Decoration#2"),
+            )
+        ),
+        Result(
+            head = "Head#4", body = "Body#4", arms = "Arms#4", waist = "Waist#4", legs = "Legs#4",
+            decorations = listOf(
+                Pair(1, "Decoration#0"), Pair(2, "Decoration#1"), Pair(3, "Decoration#2"),
+            )
+        ),
+        Result(
+            head = "Head#5", body = "Body#5", arms = "Arms#5", waist = "Waist#5", legs = "Legs#5",
+            decorations = listOf(
+                Pair(1, "Decoration#0"), Pair(2, "Decoration#1"), Pair(3, "Decoration#2"),
+            )
+        ),
+        Result(
+            head = "Head#6", body = "Body#6", arms = "Arms#6", waist = "Waist#6", legs = "Legs#6",
+            decorations = listOf(
+                Pair(1, "Decoration#0"), Pair(2, "Decoration#1"), Pair(3, "Decoration#2"),
+            )
+        ),
+    )
 }

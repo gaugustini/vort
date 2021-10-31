@@ -4,5 +4,10 @@ package com.gaugustini.vort.model
  * A class used to represent each result.
  */
 data class Result(
-    val name: String,
+    val head: String,
+    val body: String,
+    val arms: String,
+    val waist: String,
+    val legs: String,
+    val decorations: List<Pair<Int, String>>,
 )

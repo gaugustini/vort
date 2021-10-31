@@ -1,17 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
+        <import type="android.view.View" />
 
         <variable
             name="result"
             type="com.gaugustini.vort.model.Result" />
     </data>
 
-    <TextView
-        android:id="@+id/result_txt"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@{result.name}" />
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/list_armor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txt_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{result.head}"
+                tools:text="Head" />
+
+            <TextView
+                android:id="@+id/txt_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{result.body}"
+                tools:text="Body" />
+
+            <TextView
+                android:id="@+id/txt_arms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{result.arms}"
+                tools:text="Arms" />
+
+            <TextView
+                android:id="@+id/txt_waist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{result.waist}"
+                tools:text="Waist" />
+
+            <TextView
+                android:id="@+id/txt_legs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{result.legs}"
+                tools:text="Legs" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <LinearLayout
+            android:id="@+id/list_decorations"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="list_armor, list_decorations" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="16dp"
+            android:background="#1B000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/barrier" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
