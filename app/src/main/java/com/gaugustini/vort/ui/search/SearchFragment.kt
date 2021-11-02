@@ -1,13 +1,13 @@
 package com.gaugustini.vort.ui.search
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.gaugustini.vort.R
 import com.gaugustini.vort.databinding.FragmentSearchBinding
 import com.gaugustini.vort.ui.MainViewModel
@@ -32,7 +32,22 @@ class SearchFragment : Fragment() {
         // Starts with the blademaster list
         showMySkills(viewModel.mySkillsBlade)
 
+        setHasOptionsMenu(true)
         return binding.root
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.menu_search, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.setting -> {
+                NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
+            }
+        }
+        return true
     }
 
     private fun setAdapters() {

@@ -2,12 +2,13 @@ package com.gaugustini.vort.ui.result
 
 import android.os.Bundle
 import android.os.SystemClock.sleep
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
+import com.gaugustini.vort.R
 import com.gaugustini.vort.databinding.FragmentResultBinding
 import com.gaugustini.vort.ui.MainViewModel
 import com.gaugustini.vort.ui.adapter.ResultAdapter
@@ -28,7 +29,22 @@ class ResultFragment : Fragment() {
 
         setAdapter()
 
+        setHasOptionsMenu(true)
         return binding.root
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.menu_result, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.setting -> {
+                NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
+            }
+        }
+        return true
     }
 
     private fun setAdapter() {

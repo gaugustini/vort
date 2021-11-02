@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="ui.setting.SettingFragment">
+
+    <PreferenceCategory
+        app:key="search_options"
+        app:title="@string/search_options">
+
+        <SwitchPreferenceCompat
+            app:key="bad_skill"
+            app:title="@string/bad_skill" />
+
+        <SwitchPreferenceCompat
+            app:key="piercing"
+            app:title="@string/piercing" />
+
+        <SwitchPreferenceCompat
+            app:key="torso"
+            app:title="@string/torso" />
+
+        <SwitchPreferenceCompat
+            app:key="dlc"
+            app:title="@string/dlc" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="data"
+        app:title="@string/data">
+
+        <Preference
+            app:enabled="false"
+            app:key="game"
+            app:summary="MHFU"
+            app:title="@string/game" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="language_category"
+        app:title="@string/language">
+
+        <Preference
+            app:enabled="false"
+            app:key="ui_language"
+            app:summary="English"
+            app:title="@string/ui_language" />
+
+        <Preference
+            app:enabled="false"
+            app:key="data_language"
+            app:summary="English"
+            app:title="@string/data_language" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="about"
+        app:title="@string/about">
+
+        <Preference
+            app:key="version"
+            app:summary="1.0.0"
+            app:title="@string/version" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

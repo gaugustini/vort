@@ -30,4 +30,9 @@
         android:label="Result"
         tools:layout="@layout/fragment_result" />
 
+    <fragment
+        android:id="@+id/setting"
+        android:name="com.gaugustini.vort.ui.setting.SettingFragment"
+        android:label="Setting" />
+
 </navigation>

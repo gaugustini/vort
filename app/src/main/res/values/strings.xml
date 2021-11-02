@@ -2,6 +2,7 @@
     <string name="app_name">Vort</string>
 
     <string name="search">Search</string>
+    <string name="setting">Settings</string>
 
     <string name="guild_rank">Guild Rank</string>
     <string name="village_rank">Village Rank</string>
@@ -17,5 +18,18 @@
     <string name="skills">Skills</string>
 
     <string name="no_results_found">No results found.</string>
+
+    <string name="search_options">Search Options</string>
+    <string name="bad_skill">Allow Bad Skills</string>
+    <string name="piercing">Allow Piercings</string>
+    <string name="torso">Allow Torso Inc</string>
+    <string name="dlc">Allow DLC/Dummy</string>
+    <string name="data">Data</string>
+    <string name="game">Game</string>
+    <string name="language">Language</string>
+    <string name="ui_language">UI Language</string>
+    <string name="data_language">Data Language</string>
+    <string name="about">About</string>
+    <string name="version">Version</string>
 
 </resources>
