@@ -15,6 +15,8 @@ import com.gaugustini.vort.ui.adapter.SpinnerAdapter
 import com.google.android.material.tabs.TabLayout
 import dagger.hilt.android.AndroidEntryPoint
 
+// TODO: Add default values on Village/Hunter Ranks and Weapon Slots;
+//  Prevent crash when empty texts.
 @AndroidEntryPoint
 class SearchFragment : Fragment() {
 
@@ -29,7 +31,6 @@ class SearchFragment : Fragment() {
         setAdapters()
         setOnClickListeners()
         setObserves()
-        // Starts with the blademaster list
         showMySkills(viewModel.mySkillsBlade)
 
         setHasOptionsMenu(true)
@@ -51,7 +52,7 @@ class SearchFragment : Fragment() {
     }
 
     private fun setAdapters() {
-        binding.actxtGuildRank.setAdapter(
+        binding.actxtHunterRank.setAdapter(
             SpinnerAdapter(
                 requireContext(), R.layout.view_item_exposed_dropdown_menu, viewModel.ranks
             )
@@ -77,6 +78,12 @@ class SearchFragment : Fragment() {
         }
 
         binding.btnSearch.setOnClickListener {
+            viewModel.search(
+                hunterRank = binding.actxtHunterRank.text.toString().toInt(),
+                villageRank = binding.actxtVillageRank.text.toString().toInt(),
+                weaponSlot = binding.actxtWeaponSlots.text.toString().toInt(),
+                gender = binding.radioGpGender.checkedRadioButtonId,
+            )
             this.findNavController().navigate(SearchFragmentDirections.actionSearchToResult())
         }
 
@@ -85,21 +92,19 @@ class SearchFragment : Fragment() {
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 when (tab?.position) {
                     0 -> { // Blademaster
-                        viewModel.type = "Blademaster"
+                        viewModel.type = 1
                         showMySkills(viewModel.mySkillsBlade)
                         binding.btnSearch.isEnabled = viewModel.mySkillsBlade.isNotEmpty()
                     }
                     1 -> { // Gunner
-                        viewModel.type = "Gunner"
+                        viewModel.type = 2
                         showMySkills(viewModel.mySkillsGunner)
                         binding.btnSearch.isEnabled = viewModel.mySkillsGunner.isNotEmpty()
                     }
                 }
             }
 
-            override fun onTabUnselected(tab: TabLayout.Tab?) {
-
-            }
+            override fun onTabUnselected(tab: TabLayout.Tab?) {}
 
             override fun onTabReselected(tab: TabLayout.Tab?) {
                 onTabSelected(tab)
@@ -110,7 +115,7 @@ class SearchFragment : Fragment() {
 
     private fun setObserves() {
         viewModel.done.observe(viewLifecycleOwner) {
-            if (viewModel.type == "Blademaster") {
+            if (viewModel.type == 1) {
                 showMySkills(viewModel.mySkillsBlade)
                 binding.btnSearch.isEnabled = viewModel.mySkillsBlade.isNotEmpty()
             } else {

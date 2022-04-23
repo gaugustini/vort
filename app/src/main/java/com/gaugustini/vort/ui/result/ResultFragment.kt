@@ -1,7 +1,6 @@
 package com.gaugustini.vort.ui.result
 
 import android.os.Bundle
-import android.os.SystemClock.sleep
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -13,7 +12,6 @@ import com.gaugustini.vort.databinding.FragmentResultBinding
 import com.gaugustini.vort.ui.MainViewModel
 import com.gaugustini.vort.ui.adapter.ResultAdapter
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
@@ -49,22 +47,16 @@ class ResultFragment : Fragment() {
 
     private fun setAdapter() {
         val adapter = ResultAdapter()
-        adapter.submitList(viewModel.results)
+        binding.listResult.adapter = adapter
 
-        // TODO: Replace progress indicator with search time and if it has results.
-        // Progress Indicator (3s) -> RecyclerView (3s) -> TextView
-        lifecycleScope.launch(Dispatchers.Default) {
-            sleep(3000)
-            launch(Dispatchers.Main) {
-                binding.progressIndicator.visibility = View.GONE
-                binding.listResult.adapter = adapter
-            }
-            sleep(3000)
-            launch(Dispatchers.Main) {
-                binding.listResult.visibility = View.GONE
-                binding.txtNoResult.visibility = View.VISIBLE
+        // TODO: Show text "No Results found" when the search has no results.
+        lifecycleScope.launch {
+            viewModel.getResults().collect {
+                binding.progressIndicator.visibility = if (it.isEmpty()) View.VISIBLE else View.GONE
+                adapter.submitList(it)
             }
         }
+
     }
 
 }

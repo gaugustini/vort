@@ -2,41 +2,23 @@ package com.gaugustini.vort.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.gaugustini.vort.R
 import com.gaugustini.vort.databinding.ListItemResultBinding
-import com.gaugustini.vort.model.Result
+import com.gaugustini.vort.model.ResultWithNames
 
 /**
  * Adapter used in result list (RecycleView).
  */
-class ResultAdapter() :
-    ListAdapter<Result, ResultAdapter.ResultViewHolder>(DiffCallback<Result>()) {
+class ResultAdapter :
+    ListAdapter<ResultWithNames, ResultAdapter.ResultViewHolder>(DiffCallback<ResultWithNames>()) {
 
     class ResultViewHolder(private val binding: ListItemResultBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: Result) {
+        fun bind(item: ResultWithNames) {
             binding.apply {
                 result = item
-
-                val inflater = LayoutInflater.from(binding.root.context)
-
-                item.decorations.forEach {
-                    val decorationText = inflater.inflate(
-                        R.layout.view_item_decoration_text,
-                        binding.listDecorations,
-                        false
-                    ) as TextView
-
-                    val text = "${it.first} x ${it.second}"
-                    decorationText.text = text
-
-                    binding.listDecorations.addView(decorationText)
-                }
-
                 executePendingBindings()
             }
         }

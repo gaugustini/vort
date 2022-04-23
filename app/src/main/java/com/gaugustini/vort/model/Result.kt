@@ -1,13 +1,18 @@
 package com.gaugustini.vort.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
 /**
- * A class used to represent each result.
+ * A class used to represent each result. The values are ID in their respective table in database.
  */
+@Entity(tableName = "result")
 data class Result(
-    val head: String,
-    val body: String,
-    val arms: String,
-    val waist: String,
-    val legs: String,
-    val decorations: List<Pair<Int, String>>,
+    @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    val head: Int,
+    val body: Int,
+    val arms: Int,
+    val waist: Int,
+    val legs: Int,
+    val decorations: Map<Int, Int> = mapOf(),
 )

@@ -3,7 +3,7 @@ package com.gaugustini.vort.ui.adapter
 import android.annotation.SuppressLint
 import androidx.recyclerview.widget.DiffUtil
 
-class DiffCallback<T> : DiffUtil.ItemCallback<T>() {
+class DiffCallback<T : Any> : DiffUtil.ItemCallback<T>() {
 
     override fun areItemsTheSame(oldItem: T, newItem: T): Boolean {
         return oldItem == newItem

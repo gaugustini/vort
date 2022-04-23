@@ -1,0 +1,1394 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "a231b3a1e55341fbc598699282e79609",
+    "entities": [
+      {
+        "tableName": "head",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `name` INTEGER NOT NULL, `defense` INTEGER NOT NULL, `fire` INTEGER NOT NULL, `thunder` INTEGER NOT NULL, `dragon` INTEGER NOT NULL, `water` INTEGER NOT NULL, `ice` INTEGER NOT NULL, `gender` INTEGER NOT NULL, `type` INTEGER NOT NULL, `rarity` INTEGER NOT NULL, `hr` INTEGER NOT NULL, `village` INTEGER NOT NULL, `slots` INTEGER NOT NULL, `skill_one` INTEGER, `skill_one_points` INTEGER, `skill_two` INTEGER, `skill_two_points` INTEGER, `skill_three` INTEGER, `skill_three_points` INTEGER, `skill_four` INTEGER, `skill_four_points` INTEGER, `skill_five` INTEGER, `skill_five_points` INTEGER, `price` INTEGER NOT NULL, `material_one` INTEGER, `amount_one` INTEGER, `material_two` INTEGER, `amount_two` INTEGER, `material_three` INTEGER, `amount_three` INTEGER, `material_four` INTEGER, `amount_four` INTEGER, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "head.id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "head.name",
+            "columnName": "name",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "head.defense",
+            "columnName": "defense",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "head.fire",
+            "columnName": "fire",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "head.thunder",
+            "columnName": "thunder",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "head.dragon",
+            "columnName": "dragon",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "head.water",
+            "columnName": "water",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "head.ice",
+            "columnName": "ice",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "head.gender",
+            "columnName": "gender",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "head.type",
+            "columnName": "type",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "head.rarity",
+            "columnName": "rarity",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "head.hunterRank",
+            "columnName": "hr",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "head.villageRank",
+            "columnName": "village",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "head.slots",
+            "columnName": "slots",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "head.skillOne",
+            "columnName": "skill_one",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "head.skillOnePoints",
+            "columnName": "skill_one_points",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "head.skillTwo",
+            "columnName": "skill_two",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "head.skillTwoPoints",
+            "columnName": "skill_two_points",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "head.skillThree",
+            "columnName": "skill_three",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "head.skillThreePoints",
+            "columnName": "skill_three_points",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "head.skillFour",
+            "columnName": "skill_four",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "head.skillFourPoints",
+            "columnName": "skill_four_points",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "head.skillFive",
+            "columnName": "skill_five",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "head.skillFivePoints",
+            "columnName": "skill_five_points",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "head.price",
+            "columnName": "price",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "head.materialOne",
+            "columnName": "material_one",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "head.amountOne",
+            "columnName": "amount_one",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "head.materialTwo",
+            "columnName": "material_two",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "head.amountTwo",
+            "columnName": "amount_two",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "head.materialThree",
+            "columnName": "material_three",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "head.amountThree",
+            "columnName": "amount_three",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "head.materialFour",
+            "columnName": "material_four",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "head.amountFour",
+            "columnName": "amount_four",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "body",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `name` INTEGER NOT NULL, `defense` INTEGER NOT NULL, `fire` INTEGER NOT NULL, `thunder` INTEGER NOT NULL, `dragon` INTEGER NOT NULL, `water` INTEGER NOT NULL, `ice` INTEGER NOT NULL, `gender` INTEGER NOT NULL, `type` INTEGER NOT NULL, `rarity` INTEGER NOT NULL, `hr` INTEGER NOT NULL, `village` INTEGER NOT NULL, `slots` INTEGER NOT NULL, `skill_one` INTEGER, `skill_one_points` INTEGER, `skill_two` INTEGER, `skill_two_points` INTEGER, `skill_three` INTEGER, `skill_three_points` INTEGER, `skill_four` INTEGER, `skill_four_points` INTEGER, `skill_five` INTEGER, `skill_five_points` INTEGER, `price` INTEGER NOT NULL, `material_one` INTEGER, `amount_one` INTEGER, `material_two` INTEGER, `amount_two` INTEGER, `material_three` INTEGER, `amount_three` INTEGER, `material_four` INTEGER, `amount_four` INTEGER, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "body.id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "body.name",
+            "columnName": "name",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "body.defense",
+            "columnName": "defense",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "body.fire",
+            "columnName": "fire",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "body.thunder",
+            "columnName": "thunder",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "body.dragon",
+            "columnName": "dragon",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "body.water",
+            "columnName": "water",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "body.ice",
+            "columnName": "ice",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "body.gender",
+            "columnName": "gender",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "body.type",
+            "columnName": "type",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "body.rarity",
+            "columnName": "rarity",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "body.hunterRank",
+            "columnName": "hr",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "body.villageRank",
+            "columnName": "village",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "body.slots",
+            "columnName": "slots",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "body.skillOne",
+            "columnName": "skill_one",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "body.skillOnePoints",
+            "columnName": "skill_one_points",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "body.skillTwo",
+            "columnName": "skill_two",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "body.skillTwoPoints",
+            "columnName": "skill_two_points",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "body.skillThree",
+            "columnName": "skill_three",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "body.skillThreePoints",
+            "columnName": "skill_three_points",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "body.skillFour",
+            "columnName": "skill_four",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "body.skillFourPoints",
+            "columnName": "skill_four_points",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "body.skillFive",
+            "columnName": "skill_five",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "body.skillFivePoints",
+            "columnName": "skill_five_points",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "body.price",
+            "columnName": "price",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "body.materialOne",
+            "columnName": "material_one",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "body.amountOne",
+            "columnName": "amount_one",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "body.materialTwo",
+            "columnName": "material_two",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "body.amountTwo",
+            "columnName": "amount_two",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "body.materialThree",
+            "columnName": "material_three",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "body.amountThree",
+            "columnName": "amount_three",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "body.materialFour",
+            "columnName": "material_four",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "body.amountFour",
+            "columnName": "amount_four",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "arms",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `name` INTEGER NOT NULL, `defense` INTEGER NOT NULL, `fire` INTEGER NOT NULL, `thunder` INTEGER NOT NULL, `dragon` INTEGER NOT NULL, `water` INTEGER NOT NULL, `ice` INTEGER NOT NULL, `gender` INTEGER NOT NULL, `type` INTEGER NOT NULL, `rarity` INTEGER NOT NULL, `hr` INTEGER NOT NULL, `village` INTEGER NOT NULL, `slots` INTEGER NOT NULL, `skill_one` INTEGER, `skill_one_points` INTEGER, `skill_two` INTEGER, `skill_two_points` INTEGER, `skill_three` INTEGER, `skill_three_points` INTEGER, `skill_four` INTEGER, `skill_four_points` INTEGER, `skill_five` INTEGER, `skill_five_points` INTEGER, `price` INTEGER NOT NULL, `material_one` INTEGER, `amount_one` INTEGER, `material_two` INTEGER, `amount_two` INTEGER, `material_three` INTEGER, `amount_three` INTEGER, `material_four` INTEGER, `amount_four` INTEGER, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "arms.id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "arms.name",
+            "columnName": "name",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "arms.defense",
+            "columnName": "defense",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "arms.fire",
+            "columnName": "fire",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "arms.thunder",
+            "columnName": "thunder",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "arms.dragon",
+            "columnName": "dragon",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "arms.water",
+            "columnName": "water",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "arms.ice",
+            "columnName": "ice",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "arms.gender",
+            "columnName": "gender",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "arms.type",
+            "columnName": "type",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "arms.rarity",
+            "columnName": "rarity",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "arms.hunterRank",
+            "columnName": "hr",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "arms.villageRank",
+            "columnName": "village",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "arms.slots",
+            "columnName": "slots",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "arms.skillOne",
+            "columnName": "skill_one",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "arms.skillOnePoints",
+            "columnName": "skill_one_points",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "arms.skillTwo",
+            "columnName": "skill_two",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "arms.skillTwoPoints",
+            "columnName": "skill_two_points",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "arms.skillThree",
+            "columnName": "skill_three",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "arms.skillThreePoints",
+            "columnName": "skill_three_points",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "arms.skillFour",
+            "columnName": "skill_four",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "arms.skillFourPoints",
+            "columnName": "skill_four_points",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "arms.skillFive",
+            "columnName": "skill_five",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "arms.skillFivePoints",
+            "columnName": "skill_five_points",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "arms.price",
+            "columnName": "price",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "arms.materialOne",
+            "columnName": "material_one",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "arms.amountOne",
+            "columnName": "amount_one",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "arms.materialTwo",
+            "columnName": "material_two",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "arms.amountTwo",
+            "columnName": "amount_two",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "arms.materialThree",
+            "columnName": "material_three",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "arms.amountThree",
+            "columnName": "amount_three",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "arms.materialFour",
+            "columnName": "material_four",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "arms.amountFour",
+            "columnName": "amount_four",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "waist",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `name` INTEGER NOT NULL, `defense` INTEGER NOT NULL, `fire` INTEGER NOT NULL, `thunder` INTEGER NOT NULL, `dragon` INTEGER NOT NULL, `water` INTEGER NOT NULL, `ice` INTEGER NOT NULL, `gender` INTEGER NOT NULL, `type` INTEGER NOT NULL, `rarity` INTEGER NOT NULL, `hr` INTEGER NOT NULL, `village` INTEGER NOT NULL, `slots` INTEGER NOT NULL, `skill_one` INTEGER, `skill_one_points` INTEGER, `skill_two` INTEGER, `skill_two_points` INTEGER, `skill_three` INTEGER, `skill_three_points` INTEGER, `skill_four` INTEGER, `skill_four_points` INTEGER, `skill_five` INTEGER, `skill_five_points` INTEGER, `price` INTEGER NOT NULL, `material_one` INTEGER, `amount_one` INTEGER, `material_two` INTEGER, `amount_two` INTEGER, `material_three` INTEGER, `amount_three` INTEGER, `material_four` INTEGER, `amount_four` INTEGER, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "waist.id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "waist.name",
+            "columnName": "name",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "waist.defense",
+            "columnName": "defense",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "waist.fire",
+            "columnName": "fire",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "waist.thunder",
+            "columnName": "thunder",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "waist.dragon",
+            "columnName": "dragon",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "waist.water",
+            "columnName": "water",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "waist.ice",
+            "columnName": "ice",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "waist.gender",
+            "columnName": "gender",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "waist.type",
+            "columnName": "type",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "waist.rarity",
+            "columnName": "rarity",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "waist.hunterRank",
+            "columnName": "hr",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "waist.villageRank",
+            "columnName": "village",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "waist.slots",
+            "columnName": "slots",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "waist.skillOne",
+            "columnName": "skill_one",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "waist.skillOnePoints",
+            "columnName": "skill_one_points",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "waist.skillTwo",
+            "columnName": "skill_two",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "waist.skillTwoPoints",
+            "columnName": "skill_two_points",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "waist.skillThree",
+            "columnName": "skill_three",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "waist.skillThreePoints",
+            "columnName": "skill_three_points",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "waist.skillFour",
+            "columnName": "skill_four",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "waist.skillFourPoints",
+            "columnName": "skill_four_points",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "waist.skillFive",
+            "columnName": "skill_five",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "waist.skillFivePoints",
+            "columnName": "skill_five_points",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "waist.price",
+            "columnName": "price",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "waist.materialOne",
+            "columnName": "material_one",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "waist.amountOne",
+            "columnName": "amount_one",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "waist.materialTwo",
+            "columnName": "material_two",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "waist.amountTwo",
+            "columnName": "amount_two",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "waist.materialThree",
+            "columnName": "material_three",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "waist.amountThree",
+            "columnName": "amount_three",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "waist.materialFour",
+            "columnName": "material_four",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "waist.amountFour",
+            "columnName": "amount_four",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "legs",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `name` INTEGER NOT NULL, `defense` INTEGER NOT NULL, `fire` INTEGER NOT NULL, `thunder` INTEGER NOT NULL, `dragon` INTEGER NOT NULL, `water` INTEGER NOT NULL, `ice` INTEGER NOT NULL, `gender` INTEGER NOT NULL, `type` INTEGER NOT NULL, `rarity` INTEGER NOT NULL, `hr` INTEGER NOT NULL, `village` INTEGER NOT NULL, `slots` INTEGER NOT NULL, `skill_one` INTEGER, `skill_one_points` INTEGER, `skill_two` INTEGER, `skill_two_points` INTEGER, `skill_three` INTEGER, `skill_three_points` INTEGER, `skill_four` INTEGER, `skill_four_points` INTEGER, `skill_five` INTEGER, `skill_five_points` INTEGER, `price` INTEGER NOT NULL, `material_one` INTEGER, `amount_one` INTEGER, `material_two` INTEGER, `amount_two` INTEGER, `material_three` INTEGER, `amount_three` INTEGER, `material_four` INTEGER, `amount_four` INTEGER, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "legs.id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "legs.name",
+            "columnName": "name",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "legs.defense",
+            "columnName": "defense",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "legs.fire",
+            "columnName": "fire",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "legs.thunder",
+            "columnName": "thunder",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "legs.dragon",
+            "columnName": "dragon",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "legs.water",
+            "columnName": "water",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "legs.ice",
+            "columnName": "ice",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "legs.gender",
+            "columnName": "gender",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "legs.type",
+            "columnName": "type",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "legs.rarity",
+            "columnName": "rarity",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "legs.hunterRank",
+            "columnName": "hr",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "legs.villageRank",
+            "columnName": "village",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "legs.slots",
+            "columnName": "slots",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "legs.skillOne",
+            "columnName": "skill_one",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "legs.skillOnePoints",
+            "columnName": "skill_one_points",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "legs.skillTwo",
+            "columnName": "skill_two",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "legs.skillTwoPoints",
+            "columnName": "skill_two_points",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "legs.skillThree",
+            "columnName": "skill_three",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "legs.skillThreePoints",
+            "columnName": "skill_three_points",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "legs.skillFour",
+            "columnName": "skill_four",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "legs.skillFourPoints",
+            "columnName": "skill_four_points",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "legs.skillFive",
+            "columnName": "skill_five",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "legs.skillFivePoints",
+            "columnName": "skill_five_points",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "legs.price",
+            "columnName": "price",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "legs.materialOne",
+            "columnName": "material_one",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "legs.amountOne",
+            "columnName": "amount_one",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "legs.materialTwo",
+            "columnName": "material_two",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "legs.amountTwo",
+            "columnName": "amount_two",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "legs.materialThree",
+            "columnName": "material_three",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "legs.amountThree",
+            "columnName": "amount_three",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "legs.materialFour",
+            "columnName": "material_four",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "legs.amountFour",
+            "columnName": "amount_four",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "decoration",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `name` INTEGER NOT NULL, `hr` INTEGER NOT NULL, `village` INTEGER NOT NULL, `slots_required` INTEGER NOT NULL, `skill_one` INTEGER NOT NULL, `skill_one_points` INTEGER NOT NULL, `skill_two` INTEGER, `skill_two_points` INTEGER, `price` INTEGER NOT NULL, `material_one` INTEGER, `amount_one` INTEGER, `material_two` INTEGER, `amount_two` INTEGER, `material_three` INTEGER, `amount_three` INTEGER, `material_four` INTEGER, `amount_four` INTEGER, `alt_material_one` INTEGER, `alt_amount_one` INTEGER, `alt_material_two` INTEGER, `alt_amount_two` INTEGER, `alt_material_three` INTEGER, `alt_amount_three` INTEGER, `alt_material_four` INTEGER, `alt_amount_four` INTEGER, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hunterRank",
+            "columnName": "hr",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "villageRank",
+            "columnName": "village",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "slotsRequired",
+            "columnName": "slots_required",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "skillOne",
+            "columnName": "skill_one",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "skillOnePoints",
+            "columnName": "skill_one_points",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "skillTwo",
+            "columnName": "skill_two",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "skillTwoPoints",
+            "columnName": "skill_two_points",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "price",
+            "columnName": "price",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "materialOne",
+            "columnName": "material_one",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "amountOne",
+            "columnName": "amount_one",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "materialTwo",
+            "columnName": "material_two",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "amountTwo",
+            "columnName": "amount_two",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "materialThree",
+            "columnName": "material_three",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "amountThree",
+            "columnName": "amount_three",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "materialFour",
+            "columnName": "material_four",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "amountFour",
+            "columnName": "amount_four",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "alternativeMaterialOne",
+            "columnName": "alt_material_one",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "alternativeAmountOne",
+            "columnName": "alt_amount_one",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "alternativeMaterialTwo",
+            "columnName": "alt_material_two",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "alternativeAmountTwo",
+            "columnName": "alt_amount_two",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "alternativeMaterialThree",
+            "columnName": "alt_material_three",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "alternativeAmountThree",
+            "columnName": "alt_amount_three",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "alternativeMaterialFour",
+            "columnName": "alt_material_four",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "alternativeAmountFour",
+            "columnName": "alt_amount_four",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "skill",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `name` INTEGER NOT NULL, `family` INTEGER NOT NULL, `points` INTEGER NOT NULL, `type` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "family",
+            "columnName": "family",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "points",
+            "columnName": "points",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "language",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `english` TEXT NOT NULL, `spanish` TEXT NOT NULL, `french` TEXT NOT NULL, `italian` TEXT NOT NULL, `german` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "english",
+            "columnName": "english",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "spanish",
+            "columnName": "spanish",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "french",
+            "columnName": "french",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "italian",
+            "columnName": "italian",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "german",
+            "columnName": "german",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "result",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `head` INTEGER NOT NULL, `body` INTEGER NOT NULL, `arms` INTEGER NOT NULL, `waist` INTEGER NOT NULL, `legs` INTEGER NOT NULL, `decorations` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "head",
+            "columnName": "head",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "body",
+            "columnName": "body",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "arms",
+            "columnName": "arms",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "waist",
+            "columnName": "waist",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "legs",
+            "columnName": "legs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "decorations",
+            "columnName": "decorations",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a231b3a1e55341fbc598699282e79609')"
+    ]
+  }
+}

@@ -9,7 +9,7 @@
 
         <variable
             name="result"
-            type="com.gaugustini.vort.model.Result" />
+            type="com.gaugustini.vort.model.ResultWithNames" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -82,7 +82,57 @@
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/guideline"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txt_decoration_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{result.decorations[0].first + ` x ` + result.decorations[0].second}"
+                android:visibility="@{result.decorations.size() >= 1 ? View.VISIBLE : View.GONE}"
+                tools:text="Decoration x 1" />
+
+            <TextView
+                android:id="@+id/txt_decoration_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{result.decorations[1].first + ` x ` + result.decorations[1].second}"
+                android:visibility="@{result.decorations.size() >= 2 ? View.VISIBLE : View.GONE}"
+                tools:text="Decoration x 2" />
+
+            <TextView
+                android:id="@+id/txt_decoration_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{result.decorations[2].first + ` x ` + result.decorations[2].second}"
+                android:visibility="@{result.decorations.size() >= 3 ? View.VISIBLE : View.GONE}"
+                tools:text="Decoration x 3" />
+
+            <TextView
+                android:id="@+id/txt_decoration_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{result.decorations[3].first + ` x ` + result.decorations[3].second}"
+                android:visibility="@{result.decorations.size() >= 4 ? View.VISIBLE : View.GONE}"
+                tools:text="Decoration x 4" />
+
+            <TextView
+                android:id="@+id/txt_decoration_five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{result.decorations[4].first + ` x ` + result.decorations[4].second}"
+                android:visibility="@{result.decorations.size() >= 5 ? View.VISIBLE : View.GONE}"
+                tools:text="Decoration x 5" />
+
+            <TextView
+                android:id="@+id/txt_decoration_six"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{result.decorations[5].first + ` x ` + result.decorations[5].second}"
+                android:visibility="@{result.decorations.size() >= 6 ? View.VISIBLE : View.GONE}"
+                tools:text="Decoration x 6" />
+
+        </LinearLayout>
 
         <androidx.constraintlayout.widget.Barrier
             android:id="@+id/barrier"
