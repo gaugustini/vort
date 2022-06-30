@@ -17,32 +17,52 @@ class SearchDialog : DialogFragment() {
 
     private val viewModel: MainViewModel by activityViewModels()
     private lateinit var binding: DialogSearchBinding
+    private lateinit var adapter: DialogCheckboxAdapter
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         binding = DialogSearchBinding.inflate(layoutInflater)
 
-        val adapter =
-            DialogCheckboxAdapter(
-                context = requireContext(),
-                layout = R.layout.view_item_dialog_checkbox,
-                items = if (viewModel.type == 1) {
-                    viewModel.skillsBlade.keys.toList().sorted()
+        setAdapter()
+        setSearchView()
+
+        return MaterialAlertDialogBuilder(requireContext())
+            .setView(binding.root)
+            .setPositiveButton(getString(R.string.ok)) { _, _ ->
+                if (viewModel.type == 1) {
+                    viewModel.mySkillsBlade = adapter.getCheckedItems()
                 } else {
-                    viewModel.skillsGunner.keys.toList().sorted()
-                },
-                checkedItems = if (viewModel.type == 1) {
-                    mySkillsBoolean(
-                        viewModel.skillsBlade.keys.toList().sorted(), viewModel.mySkillsBlade
-                    )
-                } else {
-                    mySkillsBoolean(
-                        viewModel.skillsGunner.keys.toList().sorted(), viewModel.mySkillsGunner
-                    )
+                    viewModel.mySkillsGunner = adapter.getCheckedItems()
                 }
-            )
+                viewModel.done.value = true
+            }
+            .setNegativeButton(getString(R.string.cancel)) { _, _ -> }
+            .create()
+    }
+
+    private fun setAdapter() {
+        adapter = DialogCheckboxAdapter(
+            context = requireContext(),
+            layout = R.layout.view_item_simple_checkbox,
+            items = if (viewModel.type == 1) {
+                viewModel.skillsBlade.keys.toList().sorted()
+            } else {
+                viewModel.skillsGunner.keys.toList().sorted()
+            },
+            checkedItems = if (viewModel.type == 1) {
+                mySkillsBoolean(
+                    viewModel.skillsBlade.keys.toList().sorted(), viewModel.mySkillsBlade
+                )
+            } else {
+                mySkillsBoolean(
+                    viewModel.skillsGunner.keys.toList().sorted(), viewModel.mySkillsGunner
+                )
+            }
+        )
 
         binding.listAllSkills.adapter = adapter
+    }
 
+    private fun setSearchView() {
         binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {
                 return onQueryTextChange(query)
@@ -53,19 +73,6 @@ class SearchDialog : DialogFragment() {
                 return true
             }
         })
-
-        return MaterialAlertDialogBuilder(requireContext())
-            .setView(binding.root)
-            .setPositiveButton("OK") { _, _ ->
-                if (viewModel.type == 1) {
-                    viewModel.mySkillsBlade = adapter.getCheckedItems()
-                } else {
-                    viewModel.mySkillsGunner = adapter.getCheckedItems()
-                }
-                viewModel.done.value = true
-            }
-            .setNegativeButton("Cancel") { _, _ -> }
-            .create()
     }
 
     private fun mySkillsBoolean(skills: List<String>, mySkills: List<String>): BooleanArray {

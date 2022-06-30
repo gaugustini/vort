@@ -39,14 +39,13 @@ class DialogCheckboxAdapter(
     }
 
     fun getCheckedItems(): List<String> {
-        val list = mutableListOf<String>()
-        mCheckedItems.forEachIndexed { index, value ->
-            if (value) {
-                list.add(mItems[index])
+        return buildList {
+            mCheckedItems.forEachIndexed { index, value ->
+                if (value) {
+                    add(mItems[index])
+                }
             }
         }
-
-        return list
     }
 
 }

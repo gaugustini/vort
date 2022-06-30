@@ -1,13 +1,13 @@
 package com.gaugustini.vort.ui.search
 
 import android.os.Bundle
-import android.view.*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.NavigationUI
 import com.gaugustini.vort.R
 import com.gaugustini.vort.databinding.FragmentSearchBinding
 import com.gaugustini.vort.ui.MainViewModel
@@ -21,62 +21,25 @@ import dagger.hilt.android.AndroidEntryPoint
 class SearchFragment : Fragment() {
 
     private val viewModel: MainViewModel by activityViewModels()
-    private lateinit var binding: FragmentSearchBinding
+    private var _binding: FragmentSearchBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
-        binding = FragmentSearchBinding.inflate(inflater, container, false)
+        _binding = FragmentSearchBinding.inflate(inflater, container, false)
 
         setAdapters()
-        setOnClickListeners()
         setObserves()
         showMySkills(viewModel.mySkillsBlade)
 
-        setHasOptionsMenu(true)
         return binding.root
     }
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        super.onCreateOptionsMenu(menu, inflater)
-        inflater.inflate(R.menu.menu_search, menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.setting -> {
-                NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
-            }
-        }
-        return true
-    }
-
-    private fun setAdapters() {
-        binding.actxtHunterRank.setAdapter(
-            SpinnerAdapter(
-                requireContext(), R.layout.view_item_exposed_dropdown_menu, viewModel.ranks
-            )
-        )
-
-        binding.actxtVillageRank.setAdapter(
-            SpinnerAdapter(
-                requireContext(), R.layout.view_item_exposed_dropdown_menu, viewModel.ranks
-            )
-        )
-
-        binding.actxtWeaponSlots.setAdapter(
-            SpinnerAdapter(
-                requireContext(), R.layout.view_item_exposed_dropdown_menu, viewModel.slots
-            )
-        )
-
-    }
-
-    private fun setOnClickListeners() {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.btnSkills.setOnClickListener {
-            this.findNavController().navigate(SearchFragmentDirections.actionSearchToDialog())
+            findNavController().navigate(SearchFragmentDirections.actionSearchToDialog())
         }
-
         binding.btnSearch.setOnClickListener {
             viewModel.search(
                 hunterRank = binding.actxtHunterRank.text.toString().toInt(),
@@ -84,9 +47,8 @@ class SearchFragment : Fragment() {
                 weaponSlot = binding.actxtWeaponSlots.text.toString().toInt(),
                 gender = binding.radioGpGender.checkedRadioButtonId,
             )
-            this.findNavController().navigate(SearchFragmentDirections.actionSearchToResult())
+            findNavController().navigate(SearchFragmentDirections.actionSearchToResult())
         }
-
         binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
 
             override fun onTabSelected(tab: TabLayout.Tab?) {
@@ -106,11 +68,31 @@ class SearchFragment : Fragment() {
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {}
 
-            override fun onTabReselected(tab: TabLayout.Tab?) {
-                onTabSelected(tab)
-            }
+            override fun onTabReselected(tab: TabLayout.Tab?) {}
         })
+    }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+    private fun setAdapters() {
+        binding.actxtHunterRank.setAdapter(
+            SpinnerAdapter(
+                requireContext(), R.layout.view_item_simple_text, viewModel.ranks
+            )
+        )
+        binding.actxtVillageRank.setAdapter(
+            SpinnerAdapter(
+                requireContext(), R.layout.view_item_simple_text, viewModel.ranks
+            )
+        )
+        binding.actxtWeaponSlots.setAdapter(
+            SpinnerAdapter(
+                requireContext(), R.layout.view_item_simple_text, viewModel.slots
+            )
+        )
     }
 
     private fun setObserves() {
@@ -130,7 +112,7 @@ class SearchFragment : Fragment() {
 
         mySkills.forEach {
             val skillText = layoutInflater.inflate(
-                R.layout.view_item_skill_text,
+                R.layout.view_item_simple_text,
                 binding.listSkill,
                 false
             ) as TextView
@@ -139,7 +121,6 @@ class SearchFragment : Fragment() {
 
             binding.listSkill.addView(skillText)
         }
-
     }
 
 }

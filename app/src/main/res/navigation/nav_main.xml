@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/search"
         android:name="com.gaugustini.vort.ui.search.SearchFragment"
-        android:label="Search"
+        android:label="@string/app_name"
         tools:layout="@layout/fragment_search">
         <action
             android:id="@+id/action_search_to_result"
@@ -21,18 +21,17 @@
     <dialog
         android:id="@+id/dialog_search"
         android:name="com.gaugustini.vort.ui.search.SearchDialog"
-        android:label="Dialog Search"
         tools:layout="@layout/dialog_search" />
 
     <fragment
         android:id="@+id/result"
         android:name="com.gaugustini.vort.ui.result.ResultFragment"
-        android:label="Result"
+        android:label="@string/result"
         tools:layout="@layout/fragment_result" />
 
     <fragment
-        android:id="@+id/setting"
+        android:id="@+id/settings"
         android:name="com.gaugustini.vort.ui.setting.SettingFragment"
-        android:label="Setting" />
+        android:label="@string/settings" />
 
 </navigation>

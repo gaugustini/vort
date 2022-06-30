@@ -8,7 +8,7 @@ import com.gaugustini.vort.databinding.ListItemResultBinding
 import com.gaugustini.vort.model.ResultWithNames
 
 /**
- * Adapter used in result list (RecycleView).
+ * Adapter used in result list (RecyclerView).
  */
 class ResultAdapter :
     ListAdapter<ResultWithNames, ResultAdapter.ResultViewHolder>(DiffCallback<ResultWithNames>()) {

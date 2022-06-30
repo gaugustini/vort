@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -12,146 +11,136 @@
             type="com.gaugustini.vort.model.ResultWithNames" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:id="@+id/list_armor"
-            android:layout_width="0dp"
+        <TextView
+            android:id="@+id/txt_head"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toStartOf="@id/guideline"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_marginTop="24dp"
+            android:text="@{result.head}"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            tools:text="Head" />
 
-            <TextView
-                android:id="@+id/txt_head"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@{result.head}"
-                tools:text="Head" />
-
-            <TextView
-                android:id="@+id/txt_body"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@{result.body}"
-                tools:text="Body" />
-
-            <TextView
-                android:id="@+id/txt_arms"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@{result.arms}"
-                tools:text="Arms" />
-
-            <TextView
-                android:id="@+id/txt_waist"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@{result.waist}"
-                tools:text="Waist" />
-
-            <TextView
-                android:id="@+id/txt_legs"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@{result.legs}"
-                tools:text="Legs" />
-
-        </LinearLayout>
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.5" />
-
-        <LinearLayout
-            android:id="@+id/list_decorations"
-            android:layout_width="0dp"
+        <TextView
+            android:id="@+id/txt_body"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/guideline"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_marginTop="8dp"
+            android:text="@{result.body}"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            tools:text="Body" />
 
-            <TextView
-                android:id="@+id/txt_decoration_one"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@{result.decorations[0].first + ` x ` + result.decorations[0].second}"
-                android:visibility="@{result.decorations.size() >= 1 ? View.VISIBLE : View.GONE}"
-                tools:text="Decoration x 1" />
-
-            <TextView
-                android:id="@+id/txt_decoration_two"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@{result.decorations[1].first + ` x ` + result.decorations[1].second}"
-                android:visibility="@{result.decorations.size() >= 2 ? View.VISIBLE : View.GONE}"
-                tools:text="Decoration x 2" />
-
-            <TextView
-                android:id="@+id/txt_decoration_three"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@{result.decorations[2].first + ` x ` + result.decorations[2].second}"
-                android:visibility="@{result.decorations.size() >= 3 ? View.VISIBLE : View.GONE}"
-                tools:text="Decoration x 3" />
-
-            <TextView
-                android:id="@+id/txt_decoration_four"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@{result.decorations[3].first + ` x ` + result.decorations[3].second}"
-                android:visibility="@{result.decorations.size() >= 4 ? View.VISIBLE : View.GONE}"
-                tools:text="Decoration x 4" />
-
-            <TextView
-                android:id="@+id/txt_decoration_five"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@{result.decorations[4].first + ` x ` + result.decorations[4].second}"
-                android:visibility="@{result.decorations.size() >= 5 ? View.VISIBLE : View.GONE}"
-                tools:text="Decoration x 5" />
-
-            <TextView
-                android:id="@+id/txt_decoration_six"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@{result.decorations[5].first + ` x ` + result.decorations[5].second}"
-                android:visibility="@{result.decorations.size() >= 6 ? View.VISIBLE : View.GONE}"
-                tools:text="Decoration x 6" />
-
-        </LinearLayout>
-
-        <androidx.constraintlayout.widget.Barrier
-            android:id="@+id/barrier"
-            android:layout_width="0dp"
+        <TextView
+            android:id="@+id/txt_arms"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:barrierDirection="bottom"
-            app:constraint_referenced_ids="list_armor, list_decorations" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@{result.arms}"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            tools:text="Arms" />
+
+        <TextView
+            android:id="@+id/txt_waist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@{result.waist}"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            tools:text="Waist" />
+
+        <TextView
+            android:id="@+id/txt_legs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@{result.legs}"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            tools:text="Legs" />
+
+        <TextView
+            android:id="@+id/txt_decoration_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@{result.decorations[0].first + ` x ` + result.decorations[0].second}"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:visibility="@{result.decorations.size() >= 1 ? View.VISIBLE : View.GONE}"
+            tools:text="Decoration x 1" />
+
+        <TextView
+            android:id="@+id/txt_decoration_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@{result.decorations[1].first + ` x ` + result.decorations[1].second}"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:visibility="@{result.decorations.size() >= 2 ? View.VISIBLE : View.GONE}"
+            tools:text="Decoration x 2" />
+
+        <TextView
+            android:id="@+id/txt_decoration_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@{result.decorations[2].first + ` x ` + result.decorations[2].second}"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:visibility="@{result.decorations.size() >= 3 ? View.VISIBLE : View.GONE}"
+            tools:text="Decoration x 3" />
+
+        <TextView
+            android:id="@+id/txt_decoration_four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@{result.decorations[3].first + ` x ` + result.decorations[3].second}"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:visibility="@{result.decorations.size() >= 4 ? View.VISIBLE : View.GONE}"
+            tools:text="Decoration x 4" />
+
+        <TextView
+            android:id="@+id/txt_decoration_five"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@{result.decorations[4].first + ` x ` + result.decorations[4].second}"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:visibility="@{result.decorations.size() >= 5 ? View.VISIBLE : View.GONE}"
+            tools:text="Decoration x 5" />
+
+        <TextView
+            android:id="@+id/txt_decoration_six"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@{result.decorations[5].first + ` x ` + result.decorations[5].second}"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:visibility="@{result.decorations.size() >= 6 ? View.VISIBLE : View.GONE}"
+            tools:text="Decoration x 6" />
 
         <View
-            android:layout_width="0dp"
+            android:id="@+id/view"
+            android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_gravity="bottom"
-            android:layout_marginTop="16dp"
-            android:background="#1B000000"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/barrier" />
+            android:layout_marginTop="24dp"
+            android:background="?attr/colorOutline" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 </layout>

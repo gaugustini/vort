@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:ellipsize="marquee"
-    android:padding="8dp"
-    android:textAppearance="?attr/textAppearanceSubtitle1"
-    tools:text="Skill Text" />
+    android:ellipsize="end"
+    android:maxLines="1"
+    android:padding="16dp"
+    android:textAppearance="?attr/textAppearanceBodyLarge"
+    tools:text="Lorem ipsum dolor sit amet" />

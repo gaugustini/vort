@@ -2,9 +2,13 @@
     <string name="app_name">Vort</string>
 
     <string name="search">Search</string>
-    <string name="setting">Settings</string>
+    <string name="search_ellipsis">Search…</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="result">Result</string>
+    <string name="settings">Settings</string>
 
-    <string name="guild_rank">Guild Rank</string>
+    <string name="hunter_rank">Hunter Rank</string>
     <string name="village_rank">Village Rank</string>
     <string name="weapon_slots">Weapon Slots</string>
 
@@ -12,6 +16,7 @@
     <string name="male">Male</string>
     <string name="female">Female</string>
 
+    <string name="type">Type:</string>
     <string name="blademaster">Blademaster</string>
     <string name="gunner">Gunner</string>
 
