@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="ui.setting.SettingFragment">
+
+    <PreferenceCategory
+        app:key="display_category"
+        app:title="@string/general">
+
+        <ListPreference
+            android:defaultValue="system"
+            app:entries="@array/theme_titles"
+            app:entryValues="@array/theme_values"
+            app:key="theme"
+            app:title="@string/theme"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
 
     <PreferenceCategory
         app:key="search_options"
