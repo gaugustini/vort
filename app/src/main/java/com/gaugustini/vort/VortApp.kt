@@ -16,7 +16,7 @@ class VortApp : Application() {
 
     private fun theme() {
         val preferences = PreferenceManager.getDefaultSharedPreferences(this)
-        val value = preferences.getString("theme", "system")
+        val value = preferences.getString(getString(R.string.key_theme), "system")
         setAppTheme(value)
     }
 

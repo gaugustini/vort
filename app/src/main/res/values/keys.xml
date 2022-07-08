@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Search-->
+    <string name="key_hunter_rank">hunter_rank</string>
+    <string name="key_village_rank">village_rank</string>
+    <string name="key_weapon_slots">weapon_slots</string>
+    <string name="key_gender">gender</string>
+    <string name="key_type">type</string>
+
+    <!--Settings-->
+    <string name="key_theme">theme</string>
+    <string name="key_language">language</string>
+    <string name="key_bad_skill">bad_skill</string>
+    <string name="key_piercing">piercing</string>
+    <string name="key_torso">torso</string>
+    <string name="key_dlc">dlc</string>
+    <string name="key_game">game</string>
+    <string name="key_data_language">data_language</string>
+
+</resources>

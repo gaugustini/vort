@@ -19,7 +19,7 @@ class SettingFragment : PreferenceFragmentCompat() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val theme = findPreference<ListPreference>("theme")
+        val theme = findPreference<ListPreference>(getString(R.string.key_theme))
         theme?.setOnPreferenceChangeListener { _, newValue ->
             VortApp.setAppTheme(newValue.toString())
             true

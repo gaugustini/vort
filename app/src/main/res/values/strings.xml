@@ -26,6 +26,70 @@
 
     <string name="general">General</string>
 
+    <string name="game">Game</string>
+    <string name="mhf1">Freedom (F1)</string>
+    <string name="mhfu">Freedom Unite (FU)</string>
+    <string name="mhp3">Portable 3rd (P3)</string>
+    <string name="mh3u">3 Ultimate (3U)</string>
+    <string name="mh4">4 (4)</string>
+    <string name="mh4u">4 Ultimate (4U)</string>
+    <string name="mhgen">Generations (Gen)</string>
+    <string name="mhgu">Generations Ultimate (GU)</string>
+    <string-array name="game_titles">
+        <item>@string/mhf1</item>
+        <item>@string/mhfu</item>
+        <item>@string/mhp3</item>
+        <item>@string/mh3u</item>
+        <item>@string/mh4</item>
+        <item>@string/mh4u</item>
+        <item>@string/mhgen</item>
+        <item>@string/mhgu</item>
+    </string-array>
+    <string-array name="game_values">
+        <item>mhf1</item>
+        <item>mhfu</item>
+        <item>mhp3</item>
+        <item>mh3u</item>
+        <item>mh4</item>
+        <item>mh4u</item>
+        <item>mhgen</item>
+        <item>mhgu</item>
+    </string-array>
+
+    <string name="data_language">Data Language</string>
+    <string name="english">English</string>
+    <string name="spanish">Spanish</string>
+    <string name="french">French</string>
+    <string name="italian">Italian</string>
+    <string name="german">German</string>
+    <string name="japanese">Japanese</string>
+    <string name="chinese">Chinese</string>
+    <string-array name="data_language_titles">
+        <item>@string/english</item>
+        <item>@string/spanish</item>
+        <item>@string/french</item>
+        <item>@string/italian</item>
+        <item>@string/german</item>
+        <item>@string/japanese</item>
+        <item>@string/chinese</item>
+    </string-array>
+    <string-array name="data_language_values">
+        <item>english</item>
+        <item>spanish</item>
+        <item>french</item>
+        <item>italian</item>
+        <item>german</item>
+        <item>japanese</item>
+        <item>chinese</item>
+    </string-array>
+
+    <string name="bad_skill">Allow Bad Skills</string>
+    <string name="piercing">Allow Piercings</string>
+    <string name="torso">Allow Torso Inc</string>
+    <string name="dlc">Allow DLC/Dummy</string>
+
+    <string name="display">Display</string>
+
     <string name="theme">Theme</string>
     <string name="light_theme">Light Theme</string>
     <string name="dark_theme">Dark Theme</string>
@@ -41,16 +105,14 @@
         <item>system</item>
     </string-array>
 
-    <string name="search_options">Search Options</string>
-    <string name="bad_skill">Allow Bad Skills</string>
-    <string name="piercing">Allow Piercings</string>
-    <string name="torso">Allow Torso Inc</string>
-    <string name="dlc">Allow DLC/Dummy</string>
-    <string name="data">Data</string>
-    <string name="game">Game</string>
     <string name="language">Language</string>
-    <string name="ui_language">UI Language</string>
-    <string name="data_language">Data Language</string>
+    <string-array name="language_titles">
+        <item>@string/english</item>
+    </string-array>
+    <string-array name="language_values">
+        <item>english</item>
+    </string-array>
+
     <string name="about">About</string>
     <string name="version">Version</string>
 
