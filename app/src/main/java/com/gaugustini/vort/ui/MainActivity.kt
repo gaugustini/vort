@@ -1,13 +1,14 @@
 package com.gaugustini.vort.ui
 
 import android.os.Bundle
-import android.view.Menu
+import android.view.MenuInflater
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.MenuProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.NavigationUI
+import androidx.navigation.ui.onNavDestinationSelected
 import androidx.navigation.ui.setupWithNavController
 import com.gaugustini.vort.R
 import com.gaugustini.vort.databinding.ActivityMainBinding
@@ -19,6 +20,20 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
     private lateinit var appBarConfiguration: AppBarConfiguration
+    private val menu = object : MenuProvider {
+
+        override fun onCreateMenu(menu: android.view.Menu, menuInflater: MenuInflater) {
+            menuInflater.inflate(R.menu.menu_main, menu)
+        }
+
+        override fun onMenuItemSelected(item: MenuItem): Boolean {
+            return when (item.itemId) {
+                R.id.settings -> item.onNavDestinationSelected(navController)
+                else -> true
+            }
+        }
+
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,18 +50,8 @@ class MainActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(navController.graph)
 
         binding.topAppBar.setupWithNavController(navController, appBarConfiguration)
-    }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.settings -> NavigationUI.onNavDestinationSelected(item, navController)
-            else -> true
-        }
+        addMenuProvider(menu, this)
     }
 
 }
